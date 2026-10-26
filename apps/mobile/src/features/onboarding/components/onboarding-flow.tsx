@@ -418,7 +418,7 @@ export function OnboardingFlow({
       const agentId = await createAgent({
         name: trimmedName,
         description: draft.description.trim(),
-        initialMessage: agentInitialMessage(draft.description, firstTask),
+        initialMessage: agentInitialMessage(trimmedName, draft.description, firstTask),
         avatarSeed: draft.seed,
         avatarHue: draft.hue,
       });

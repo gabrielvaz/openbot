@@ -77,7 +77,7 @@ export function AddAgentScreen() {
       await workspace().createAgent({
         name: name.trim(),
         description: description.trim(),
-        initialMessage: agentInitialMessage(description),
+        initialMessage: agentInitialMessage(name, description),
         avatarSeed,
         avatarHue,
         ...(workspace().activeServer.id === serverId ? runtime : {}),
